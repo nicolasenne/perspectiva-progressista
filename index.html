@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Uma página simples para encontrar perfis públicos do Instagram em um só lugar."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Perspectiva Progressista</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇧🇷</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="topbar" aria-hidden="true"></div>
+
+    <header class="container">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span> Perspectiva Progressista
+      </div>
+      <h1>As vozes da <span>democracia</span>.</h1>
+      <p class="intro">
+        Um diretório de perfis públicos, ideias e vozes do campo progressista
+        brasileiro.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="toolbar" aria-label="Pesquisar perfis">
+        <label class="search-wrap">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="10.8"
+                cy="10.8"
+                r="6.8"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path
+                d="m16 16 4.2 4.2"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <input
+            class="search"
+            id="search"
+            type="search"
+            placeholder="Buscar uma conta..."
+            autocomplete="off"
+            aria-label="Buscar uma conta pelo nome"
+          />
+        </label>
+        <div class="results-count" aria-live="polite">
+          <strong id="count">19 perfis</strong> na lista
+        </div>
+      </section>
+
+      <section class="grid" id="profiles" aria-label="Perfis do Instagram">
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/lulaoficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @lulaoficial no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/816452504_18432710731199497_4033414431737629486_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=fyZrGVTUNq0Q7kNvwEOnqEN&amp;_nc_oc=AdobTW4HzKoC0yJxge3FjyBNIw5I-wyCQxlGrIUqKWRCSJ5bfl-c_0uWUFcRzFlXNqXkqGzLOZyViZYB1HBRK4d6&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=mokF9o92FKM_EKemphGo8Q&amp;_nc_ss=7b6a8&amp;oh=00_AQMiPv2kQGBxHbdhsSMo_dRkekpkT2g7X4w_msgdCPGwkQ&amp;oe=6AD1A1DF"
+                alt="Foto do perfil @lulaoficial"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'L';
+                " /></span></span
+          ><span class="handle">@lulaoficial</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/anaelisast/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @anaelisast no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/767190457_18173884000442464_492155593504059878_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=ZMF_FvzpR0UQ7kNvwFQJMtw&amp;_nc_oc=AdofWAIpJnGG4GiIuLcy2RYPwWbvskDvr-x2M8N6Pq0hHiDvvZzRHg0pAmZxKh13gNyuPt27zPStMTbUT3hMIbEQ&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=cnAc1fX1b99J1Ks2LBQp6Q&amp;_nc_ss=7b6a8&amp;oh=00_AQMZ-D2LXC9dDsW2Sfnywtf_xfJCw0uUDU6hw_2HWjuqIg&amp;oe=6AD1B5FE"
+                alt="Foto do perfil @anaelisast"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'A';
+                " /></span></span
+          ><span class="handle">@anaelisast</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/bemoreiradf/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @bemoreiradf no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/839497787_18632804752002337_6336367255384391598_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=Ylubh9lI3xgQ7kNvwEmF06m&amp;_nc_oc=Adql_ZgXEgAY8vfDbV8b95Egs1e1TjMOkQEUvsBvsSnBGsujCF6DV9SnfZXCGqRANhaGpBb_rBWeCkM82iWFaYGU&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=yZTekZqOg5bA-aSCGTnTdQ&amp;_nc_ss=7b6a8&amp;oh=00_AQNtgQuFBSNOUyuCSJ5xFpfXsLZ4FJvNI8JppDzO7rNOKQ&amp;oe=6AD1D174"
+                alt="Foto do perfil @bemoreiradf"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'B';
+                " /></span></span
+          ><span class="handle">@bemoreiradf</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/brasilcomlula/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @brasilcomlula no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/775244191_18073740032450003_8799021385308931392_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy43NjMuQzMifQ%3D%3D&amp;_nc_ohc=8LqJxaWJDxIQ7kNvwHMhZ0R&amp;_nc_oc=AdoWpZEtqsPfonnMOikBzgzpuGqXREGtBI4_mvAAeUEHPr405ctnhIwG0shd5wawyYwX8hYPOpLJpYCdMtsjKW_B&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=c9Mvmt4SKBbSuudVFLhPYw&amp;_nc_ss=7b6a8&amp;oh=00_AQMtvGunPgWAgKQxtBW0YUZ5aFzRz-tEjWXlrVJO-JQ_Fw&amp;oe=6AD1CD06"
+                alt="Foto do perfil @brasilcomlula"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'B';
+                " /></span></span
+          ><span class="handle">@brasilcomlula</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/brasilforadacaverna/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @brasilforadacaverna no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/520544699_18069987356512481_7099825575952813352_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=-Fl6tYwCjyAQ7kNvwEa4vuj&amp;_nc_oc=Adr-k23Qcs61reoT2z6lq1IJAA3awEUcaO7m-lZXK7s6d3r9LoAS3QRrnarSn8NZF4HiAG3uWdvkUsSqT3-hP2jS&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=kEKSD0e301kiGb4e5bZcXg&amp;_nc_ss=7b6a8&amp;oh=00_AQPqdGh-GrOk_z5w_PjV2nm8Gcdf1vwv4Ngt1-kZcnEX9g&amp;oe=6AD1BD4E"
+                alt="Foto do perfil @brasilforadacaverna"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'B';
+                " /></span></span
+          ><span class="handle">@brasilforadacaverna</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/esquerdaradical.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @esquerdaradical.br no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/590842929_18094318202508088_7313755390939585977_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy45NDAuQzMifQ%3D%3D&amp;_nc_ohc=pxJhwOH710oQ7kNvwGaduwb&amp;_nc_oc=AdqmcqU9JjsX9E9xMXGSw73ksHcWBg1cQcKpns2EwvmISWgy25hoPq3xlp-4FqDK3Sd57obEqgrWFTtHZGPFJMS8&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=VG7Tb9XIG4vUDiHHs35GOw&amp;_nc_ss=7b6a8&amp;oh=00_AQPpoNFKTwj38jRAH4tAkVkSrBF5sRA9OH29nxDshyFgJA&amp;oe=6AD1AC9F"
+                alt="Foto do perfil @esquerdaradical.br"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'E';
+                " /></span></span
+          ><span class="handle">@esquerdaradical.br</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/esquerdasexyoficial/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @esquerdasexyoficial no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/730196796_18162608053409998_1492876213205362603_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=n6JrzAfunEsQ7kNvwEh1LFP&amp;_nc_oc=AdquwLrQW5ln5SjLDNvQNiJipdZjoLEnuiR1nS3hRC5kHh7kUIbgcvuRGK6nKbQzK7uVYwobH8KAz-eiil4Du-UV&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=FxQaXx9miQb97Ylfj5tFgw&amp;_nc_ss=7b6a8&amp;oh=00_AQNzBSywktlEJHitJTr30svjkaia9gAYWUwpgxap5Iuzvw&amp;oe=6AD1B96D"
+                alt="Foto do perfil @esquerdasexyoficial"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'E';
+                " /></span></span
+          ><span class="handle">@esquerdasexyoficial</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/esquerdaverde/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @esquerdaverde no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/543675680_18282737716284782_2503342092813782726_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDI0LkMzIn0%3D&amp;_nc_ohc=P3-FNWLWYt8Q7kNvwEuVQuw&amp;_nc_oc=AdrXGvj-Ld_gq_Gn1jzI8-9F0h6-PexQlhxBU_WU667DAKxExIF-J1GFaOltc5Gm9q7qI69-Lvg3UHJJq15e_DXl&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=UqJpFI-tYdlePR7x9bOkVA&amp;_nc_ss=7b6a8&amp;oh=00_AQOQlqy3X1IVvtxHdX21q3HTHc3WB7IABunz69wwOd5g1A&amp;oe=6AD1CFEE"
+                alt="Foto do perfil @esquerdaverde"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'E';
+                " /></span></span
+          ><span class="handle">@esquerdaverde</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/eutocomlula/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @eutocomlula no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/581083232_18011692061812434_5567503620679539710_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDM2LkMzIn0%3D&amp;_nc_ohc=y7WgddxMkBEQ7kNvwE4uUSs&amp;_nc_oc=AdpaOHt0uc13voLbAqZ0cY_8II5mxgSFaf89rU6l_YGcpFkqaCAKPt7G7LyRGHCIG0B8LNDV3rXj-_VBxHL1yCDA&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=2XBrlDPODh1yKMwL3E2tYg&amp;_nc_ss=7b6a8&amp;oh=00_AQM1poS97bbJt6kA9g3OyX120p7wCDCZ3y0OdwKAYro_Dw&amp;oe=6AD1D54C"
+                alt="Foto do perfil @eutocomlula"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'E';
+                " /></span></span
+          ><span class="handle">@eutocomlula</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/guilhermecortez_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @guilhermecortez_ no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/842492092_18636054244012929_7394947178964966265_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=NaqGRv9RTBwQ7kNvwHIaZBq&amp;_nc_oc=AdrRM1MJ9KGY4lX2wkMzq4TqighWwIJsk210MwJPc_DDXjZbZsowMwZJb36KaqWg09ypvXs3aViH_TqVdc-_Ivws&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=vjArVK49Jlbb-9bgdCV35g&amp;_nc_ss=7b6a8&amp;oh=00_AQMD5F94mmrvxu81xKxsi4X0Piny0nQOQmyC67wqQd_Bnw&amp;oe=6AD1A29C"
+                alt="Foto do perfil @guilhermecortez_"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'G';
+                " /></span></span
+          ><span class="handle">@guilhermecortez_</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/hilton_erika/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @hilton_erika no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/838218893_18637434895019288_4440722232790508382_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=_ZzLaj9u2LwQ7kNvwHyidKu&amp;_nc_oc=Adr2cBC2zINQHNiqRSQqMbuvCpB4ETD0xdyu9BIuSzI0SCR6aC1WqrJhgmvR1eq1pz1xpn7m7KZL4InKI3BO-mt7&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=n5k1R_JzQl7NRFEIbkEDIw&amp;_nc_ss=7b6a8&amp;oh=00_AQNEPgsRVm4QzuBnzyrpu8EKgTZfBrPEJLaQDlySN2Ujmg&amp;oe=6AD1BB99"
+                alt="Foto do perfil @hilton_erika"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'H';
+                " /></span></span
+          ><span class="handle">@hilton_erika</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/jairmearrependi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @jairmearrependi no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/695916685_18293868991303381_2734476419848564104_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=lQ_CsixCkiAQ7kNvwFGlxr2&amp;_nc_oc=AdoWxP0xAoVfB2IrXJ7E_b_h5kNjVXCddwcd2AVYVNPJYBdEub6g332NdgT8rcrPoz3tlYASus-Bsl6YC4IYbiky&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=FmuqOL_pzmC1d1Bq6LRHSA&amp;_nc_ss=7b6a8&amp;oh=00_AQOpVvAncais9u1AacxbAfBhnzZTPYf_WdGLpriT5FImlQ&amp;oe=6AD1D7B2"
+                alt="Foto do perfil @jairmearrependi"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'J';
+                " /></span></span
+          ><span class="handle">@jairmearrependi</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/janones.apoio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @janones.apoio no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/839594220_18121616449822458_107557318245015121_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy42ODkuQzMifQ%3D%3D&amp;_nc_ohc=msgnsomWe3QQ7kNvwGIZZMP&amp;_nc_oc=Adr2teg44WnSb7lV9cbqCV4eXhRNkQMisuBANzyZGuf5pCUL_BIG87lekk49d17XUcgjOhORiLjjS8dvdu21Wgm1&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=bki-oi64Ns02yZ1RrNsZRg&amp;_nc_ss=7b6a8&amp;oh=00_AQO8rTKR8Vtxu_xRY4ZJ4JqvSfJZ1Xn6GPSXY_F_Jbz0GA&amp;oe=6AD1BE54"
+                alt="Foto do perfil @janones.apoio"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'J';
+                " /></span></span
+          ><span class="handle">@janones.apoio</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/jones.manoel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @jones.manoel no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/838090257_18449777701120716_2096779635706096811_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=XReji2a64TMQ7kNvwEbZBS8&amp;_nc_oc=Ado4vSLI8rVs5Jb8s9nZ-kbfAslDVD6XIJNy9iYp5IwHt3nbqQtHKK041PXoeneK1JwVTqjqu_8b7NFyGEg-TZav&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=lzLj7RkbOY7toLdbz-Zs9A&amp;_nc_ss=7b6a8&amp;oh=00_AQM5_Rrm9Sn8d5A-HAtPLC37xfWFMz-6qA_uoCtZuclhkA&amp;oe=6AD1B96F"
+                alt="Foto do perfil @jones.manoel"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'J';
+                " /></span></span
+          ><span class="handle">@jones.manoel</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/jovenspelademocracia_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @jovenspelademocracia_ no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/833913599_18397348318160367_1768754165656196571_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy43NzcuQzMifQ%3D%3D&amp;_nc_ohc=9u9qw-DSVvkQ7kNvwEB0pIv&amp;_nc_oc=AdpleWM4pqMci2kEokcfmUmrq3_XdgqqwbpW676Yfbm4kafF6VGOnXyXNkgqjL8PdbDnYIDE4oxNf_IinFMWXtsr&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=zuPdQ-qrU3RMj1p5MGnygw&amp;_nc_ss=7b6a8&amp;oh=00_AQORqpkONmd75r_6IvtIgPxAB-V01Vy8ADn2E4AFfP5Gag&amp;oe=6AD1B506"
+                alt="Foto do perfil @jovenspelademocracia_"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'J';
+                " /></span></span
+          ><span class="handle">@jovenspelademocracia_</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/portavozdolulabr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @portavozdolulabr no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/836807094_18104032463181361_5926734822236946298_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=-IrlkdR4KJQQ7kNvwEznmjz&amp;_nc_oc=Adq2fZaDB1l4RXYCaNuBSYJ-50HzeF7ktwx9d5ES5vOt3gS1MaTivwk1L_TTT2A00yrKsX4823zgY9F8lwvf5PBP&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=-0OOPKwRrmjcmUGUgb_FAw&amp;_nc_ss=7b6a8&amp;oh=00_AQNR7Cf1Yg-m0qDx_8FO1MUEYqdqRmxSgoRYCKJ5tiI0aQ&amp;oe=6AD1CFCC"
+                alt="Foto do perfil @portavozdolulabr"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'P';
+                " /></span></span
+          ><span class="handle">@portavozdolulabr</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/pragmatismopolitico/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @pragmatismopolitico no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.2885-19/465101046_3955954984686887_7482239272781723259_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=QCydtdyiy8EQ7kNvwFHmSdC&amp;_nc_oc=AdrNzFr7lO6Ak-FtVaKrRQ50WbUyX81BsZpA6nULYHtPG7TlCWQZ3Bs3LUfWhYyyf62Uk8YcQ9K6D4PsItP0KWRy&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_ss=7b6a8&amp;oh=00_AQPgurQkrrXHjGL0fUqlRgmbzDHkq8RIBzKdb9j1hT7mDQ&amp;oe=6AD1CC04"
+                alt="Foto do perfil @pragmatismopolitico"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'P';
+                " /></span></span
+          ><span class="handle">@pragmatismopolitico</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/samiabomfim/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @samiabomfim no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.82787-19/837737572_18630359125047334_7364716765327841686_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDQ5LkMzIn0%3D&amp;_nc_ohc=DbgFgLxHSIMQ7kNvwFhzfqL&amp;_nc_oc=AdqSVK2Ef8_Nti1SzB8BhPs8hhi1j0cZx4fJOo3YwawQL5xT4s6n96RELDWqwlwMuG4va92IBcNb81ZsiSR4Z45q&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_gid=YItfhNdWXhGV7MqIVM0VqA&amp;_nc_ss=7b6a8&amp;oh=00_AQOgJaCGsE4qWMleDCL6tV2iSx5vDIiTv_Z6_7XH6am2WA&amp;oe=6AD1B494"
+                alt="Foto do perfil @samiabomfim"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'S';
+                " /></span></span
+          ><span class="handle">@samiabomfim</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+        <a
+          class="profile-card"
+          href="https://www.instagram.com/sejasubversivo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir @sejasubversivo no Instagram"
+        >
+          <span class="avatar"
+            ><span class="avatar-inner"
+              ><img
+                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.2885-19/395155004_867209205067679_4209060790883155916_n.jpg?_nc_cat=1&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDIyLmMyIn0%3D&amp;_nc_ohc=kP91A85VIVwQ7kNvwHgnqRL&amp;_nc_oc=AdozMrOENeouRAL9U8sakxhWosmDeT-rxMn-_SJ8aUZB_sV4Ca65ZgOx63rPbEzl9DxVuPFzChCNzsanNd_qaSLl&amp;_nc_zt=24&amp;_nc_ht=instagram.fcgh69-1.fna&amp;_nc_ss=7b6a8&amp;oh=00_AQPAjjl7tmBHSw8LW16JjTA2CNC5ZRa4hVEmETaFzyVnZg&amp;oe=6AD1C293"
+                alt="Foto do perfil @sejasubversivo"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.textContent = 'S';
+                " /></span></span
+          ><span class="handle">@sejasubversivo</span
+          ><span class="visit"
+            >Ver perfil
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 12 12 4M5 4h7v7"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+        </a>
+      </section>
+      <div class="empty" id="empty">
+        Nenhuma conta encontrada. Tente outra busca.
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <strong>Sobre o Perspectiva Progressista.</strong> <br />
+        O Perspectiva Progressista é uma iniciativa cidadã independente que
+        reúne links para perfis públicos associados ao campo progressista
+        brasileiro, com o objetivo de facilitar sua localização. A inclusão de
+        um perfil não implica vínculo oficial, representação ou concordância
+        integral com as opiniões e atividades de seus responsáveis.<br />Para
+        solicitar correções, atualizações ou remoções de links, entre em contato
+        pelo e-mail <strong>progressistaperspectiva@gmail.com</strong>.
+      </div>
+    </footer>
+  </body>
+</html>
