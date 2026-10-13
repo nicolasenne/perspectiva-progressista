@@ -1,27 +1,41 @@
-const search = document.querySelector("#search");
-const cards = [...document.querySelectorAll(".profile-card")];
-const count = document.querySelector("#count");
-const empty = document.querySelector("#empty");
+(() => {
+  const search = document.querySelector('#search');
+  const cards = [...document.querySelectorAll('.profile-card')];
+  const count = document.querySelector('#count');
+  const channelsCount = document.querySelector('#channels-count');
+  const profilesCount = document.querySelector('#profiles-count');
+  const channelsSection = document.querySelector('#channels-section');
+  const profilesSection = document.querySelector('#profiles-section');
+  const empty = document.querySelector('#empty');
 
-function filterProfiles() {
-  const term = search.value.trim().toLocaleLowerCase("pt-BR").replace(/^@/, "");
-  let visible = 0;
+  const normalize = (value) => value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 
-  cards.forEach((card) => {
-    const username = card
-      .querySelector(".handle")
-      .textContent.trim()
-      .toLocaleLowerCase("pt-BR")
-      .replace(/^@/, "");
-    const matches = username.includes(term);
-    card.hidden = !matches;
-    if (matches) visible += 1;
-  });
+  function filterCards() {
+    const query = normalize(search.value);
+    let visibleChannels = 0;
+    let visibleProfiles = 0;
 
-  count.textContent = `${visible} ${visible === 1 ? "perfil" : "perfis"}`;
-  empty.style.display = visible === 0 ? "block" : "none";
-}
+    cards.forEach((card) => {
+      const matches = normalize(card.innerText + ' ' + card.getAttribute('aria-label')).includes(query);
+      card.hidden = !matches;
+      if (matches) {
+        if (card.closest('#channels')) visibleChannels++;
+        else visibleProfiles++;
+      }
+    });
 
-search.addEventListener("input", filterProfiles);
-search.addEventListener("search", filterProfiles);
-filterProfiles();
+    channelsSection.hidden = visibleChannels === 0;
+    profilesSection.hidden = visibleProfiles === 0;
+    count.textContent = `${visibleChannels + visibleProfiles} ${visibleChannels + visibleProfiles === 1 ? 'resultado' : 'resultados'}`;
+    channelsCount.textContent = `${visibleChannels} ${visibleChannels === 1 ? 'canal' : 'canais'}`;
+    profilesCount.textContent = `${visibleProfiles} ${visibleProfiles === 1 ? 'perfil' : 'perfis'}`;
+    empty.style.display = visibleChannels + visibleProfiles === 0 ? 'block' : 'none';
+  }
+
+  search.addEventListener('input', filterCards);
+  filterCards();
+})();
