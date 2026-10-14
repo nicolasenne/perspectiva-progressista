@@ -1,14 +1,14 @@
 (() => {
   const search = document.querySelector('#search');
-  const cards = [...document.querySelectorAll('.profile-card')];
+  const cards = [...document.querySelectorAll('.profile-card[data-platform]')];
   const count = document.querySelector('#count');
-  const channelsCount = document.querySelector('#channels-count');
-  const profilesCount = document.querySelector('#profiles-count');
-  const channelsSection = document.querySelector('#channels-section');
-  const profilesSection = document.querySelector('#profiles-section');
   const empty = document.querySelector('#empty');
+  const filterButtons = [...document.querySelectorAll('[data-filter]')];
+  const sections = [...document.querySelectorAll('.directory-section')];
+  const dividers = [...document.querySelectorAll('.section-divider')];
+  let activeFilter = 'all';
 
-  const normalize = (value) => value
+  const normalize = (value = '') => value
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
@@ -16,25 +16,57 @@
 
   function filterCards() {
     const query = normalize(search.value);
-    let visibleChannels = 0;
-    let visibleProfiles = 0;
+    let visible = 0;
+    const sectionCounts = new Map();
 
     cards.forEach((card) => {
-      const matches = normalize(card.innerText + ' ' + card.getAttribute('aria-label')).includes(query);
+      const platform = card.dataset.platform;
+      const searchable = normalize(`${card.innerText} ${card.getAttribute('aria-label') || ''} ${card.href || ''}`);
+      const matches = (activeFilter === 'all' || platform === activeFilter) && searchable.includes(query);
       card.hidden = !matches;
       if (matches) {
-        if (card.closest('#channels')) visibleChannels++;
-        else visibleProfiles++;
+        visible++;
+        const section = card.closest('.directory-section');
+        if (section) sectionCounts.set(section.id, (sectionCounts.get(section.id) || 0) + 1);
       }
     });
 
-    channelsSection.hidden = visibleChannels === 0;
-    profilesSection.hidden = visibleProfiles === 0;
-    count.textContent = `${visibleChannels + visibleProfiles} ${visibleChannels + visibleProfiles === 1 ? 'resultado' : 'resultados'}`;
-    channelsCount.textContent = `${visibleChannels} ${visibleChannels === 1 ? 'canal' : 'canais'}`;
-    profilesCount.textContent = `${visibleProfiles} ${visibleProfiles === 1 ? 'perfil' : 'perfis'}`;
-    empty.style.display = visibleChannels + visibleProfiles === 0 ? 'block' : 'none';
+    sections.forEach((section) => {
+      const n = sectionCounts.get(section.id) || 0;
+      section.hidden = n === 0;
+      const counter = section.querySelector('.section-count');
+      if (!counter) return;
+      const noun = section.id === 'channels-section' ? (n === 1 ? 'canal' : 'canais')
+        : section.id === 'youtube-section' ? (n === 1 ? 'canal' : 'canais')
+        : section.id === 'reddit-section' ? (n === 1 ? 'comunidade' : 'comunidades')
+        : (n === 1 ? 'perfil' : 'perfis');
+      counter.textContent = `${n} ${noun}`;
+    });
+
+    dividers.forEach((divider) => {
+      const previousSection = divider.previousElementSibling;
+      const nextSection = divider.nextElementSibling;
+      divider.hidden = !previousSection?.classList.contains('directory-section')
+        || !nextSection?.classList.contains('directory-section')
+        || previousSection.hidden
+        || nextSection.hidden;
+    });
+
+    count.textContent = `${visible} ${visible === 1 ? 'resultado' : 'resultados'}`;
+    empty.style.display = visible === 0 ? 'block' : 'none';
   }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter;
+      filterButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      filterCards();
+    });
+  });
 
   search.addEventListener('input', filterCards);
   filterCards();
